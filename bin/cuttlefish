@@ -27,7 +27,6 @@ opt_parser.parse!
 
 case ARGV[0]
 when "test"
-  puts "call start on options #{options.inspect}"
   Cuttlefish::Client.run_tests(options)
 else
   puts opt_parser
