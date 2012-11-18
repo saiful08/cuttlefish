@@ -17,7 +17,14 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Our CLI is now on your path
+
+    $ cuttlefish
+
+Use it to test our prediction engine 
+
+    $ cuttlefish test -s http://cuttlefish.joingrouper.com
+
 
 ## Contributing
 
