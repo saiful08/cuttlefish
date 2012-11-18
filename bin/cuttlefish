@@ -27,7 +27,8 @@ opt_parser.parse!
 
 case ARGV[0]
 when "test"
-  Cuttlefish::Client.run_tests(options)
+  options[:server] ||= 'http://cuttlefish.joingrouper.com'
+  Cuttlefish::Client.run_tests(options[:server])
 else
   puts opt_parser
 end
