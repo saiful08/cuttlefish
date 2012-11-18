@@ -6,8 +6,8 @@ Gem::Specification.new do |gem|
   gem.version       = Cuttlefish::VERSION
   gem.authors       = ["Tom Brown"]
   gem.email         = ["tom@joingrouper.com"]
-  gem.description   = gem.summary = "Testing for Grouper's Cuttlefish challenge"
-  gem.homepage      = "http://joingrouper.com"
+  gem.description   = gem.summary = "Tools for Grouper's Cuttlefish contest"
+  gem.homepage      = "https://github.com/Grouper/cuttlefish"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = ['cuttlefish']
