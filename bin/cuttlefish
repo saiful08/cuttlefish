@@ -1,2 +1,39 @@
 #!/usr/bin/env ruby
-p "Cuttle Cuttle"
+require_relative '../lib/cuttlefish/client'
+require 'optparse'
+options = {}
+
+opt_parser = OptionParser.new do |opt|
+  opt.banner = "Usage: cuttlefish COMMAND [OPTIONS]"
+  opt.separator  '          _________  '
+  opt.separator  '         /       u \  '
+  opt.separator  '         \_____v___ \  '
+  opt.separator  '                   \\\\\\  '
+  opt.separator  "Commands"
+  opt.separator  "     test: run a set of 1000 matches against your cuttlefish server."
+  opt.separator  ""
+  opt.separator  "Options"
+
+  opt.on("-s","--server SERVER","The cuttlefish server you want to test. Defaults to http://cuttlefish.joingrouper.com.") do |server|
+    options[:server] = server
+  end  
+
+  opt.on("-h","--help","help") do
+    puts opt_parser
+  end
+end
+
+opt_parser.parse!
+
+case ARGV[0]
+when "test"
+  puts "call start on options #{options.inspect}"
+  Cuttlefish::Client.run_tests(options)
+else
+  puts opt_parser
+end
+
+ 
+ 
+ 
+ 
