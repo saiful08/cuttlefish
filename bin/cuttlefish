@@ -5,9 +5,9 @@ options = {}
 
 opt_parser = OptionParser.new do |opt|
   opt.banner = "Usage: cuttlefish COMMAND [OPTIONS]"
-  opt.separator  '          _________  '
-  opt.separator  '         /       u \  '
-  opt.separator  '         \_____v___ \  '
+  opt.separator  '         __________  '
+  opt.separator  '        /_____/  u \  '
+  opt.separator  '        \_____\____ \  '
   opt.separator  '                   \\\\\\  '
   opt.separator  "Commands"
   opt.separator  "     test: run a set of 1000 matches against your cuttlefish server."
